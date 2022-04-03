@@ -1,53 +1,85 @@
-let name = "John";
+// let deckId = "";
+// let scorePlayer1 = 0;
+// let scorePlayer2 = 0;
 
-function greeting() {
-	let message = "Hi";
-	console.log(message + " " + name);
-}
+// fetch("https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1")
+// 	.then((res) => res.json())
+// 	.then((data) => {
+// 		deckId = data.deck_id;
+// 	})
+// 	.catch((err) => {
+// 		console.log(`error ${err}`);
+// 	});
 
-greeting();
+// document.querySelector("button").addEventListener("click", getFetch);
 
-// let value;
-// const loader = document.querySelector("#loading");
-
-// function displayLoading() {
-// 	loader.classList.add("display");
-// 	// to stop loading after some time
-// 	setTimeout(() => {
-// 		loader.classList.remove("display");
-// 	}, 5000);
+// function returnValue(value) {
+// 	if (value === "ACE") {
+// 		return 14;
+// 	} else if (value === "KING") {
+// 		return 13;
+// 	} else if (value === "QUEEN") {
+// 		return 12;
+// 	} else if (value === "JACK") {
+// 		return 11;
+// 	} else {
+// 		return Number(value);
+// 	}
 // }
 
-// function hideLoading() {
-// 	loader.classList.remove("display");
+// function checkWinnerRound(player1, player2) {
+// 	if (returnValue(player1) > returnValue(player2)) {
+// 		scorePlayer1 += 1;
+// 		document.querySelector(".player1score").innerHTML = scorePlayer1;
+// 		return "Player 1 WON!";
+// 	} else if (returnValue(player1) < returnValue(player2)) {
+// 		scorePlayer2 += 1;
+// 		document.querySelector(".player2score").innerHTML = scorePlayer2;
+// 		return "Player 2 WON!";
+// 	} else {
+// 		return "DRAW!";
+// 	}
 // }
 
-// document.querySelector("input[type=submit]").addEventListener("click", function (e) {
-// 	e.preventDefault();
-// 	value = document.querySelector("input[type=date]").value;
-// 	getFetch();
-// 	displayLoading();
-// 	document.querySelector("input[type=date]").value = "";
-// });
+// function checkGameWinner(player1, player2) {
+// 	if (player1 > player2) {
+// 		return "PLAYER 1 WON THE GAME!";
+// 	} else if (player1 < player2) {
+// 		return "PLAYER 2 WON THE GAME!";
+// 	} else {
+// 		return "DRAW";
+// 	}
+// }
 
 // function getFetch() {
-// 	const url = `https://api.nasa.gov/planetary/apod?api_key=Fj4JCDFAyogLg8uEngWefQg2uq6hnr4ZWvlQN4FE&date=${value}`;
+// 	const url = `https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=2`;
 // 	fetch(url)
 // 		.then((res) => res.json())
 // 		.then((data) => {
-// 			if (data.media_type == "image") {
-// 				document.querySelector(".image").src = data.hdurl;
-// 			} else if (data.media_type == "video") {
-// 				document.querySelector("iframe").src = data.url;
-// 				document.querySelector("iframe").style.display = "block";
-// 			} else {
-// 				alert("media not supported - contact NASA IMMEDIATLY!");
+// 			console.log(data);
+// 			document.querySelector("#player1").src = data.cards[0].image;
+// 			document.querySelector("#player2").src = data.cards[1].image;
+
+// 			document.querySelector("h3").innerHTML = checkWinnerRound(data.cards[0].value, data.cards[1].value);
+// 			document.querySelector(".remaining").innerHTML = data.remaining;
+
+// 			if (data.remaining === 0) {
+// 				setTimeout(() => {
+// 					alert(checkGameWinner(scorePlayer1, scorePlayer2));
+// 				}, 1500);
 // 			}
-// 			document.querySelector("h2").innerHTML = data.title;
-// 			document.querySelector(".explanation").innerHTML = data.explanation;
-// 			hideLoading();
 // 		})
 // 		.catch((err) => {
 // 			console.log(`error ${err}`);
 // 		});
 // }
+
+function duplicate(arr) {
+	let newArr = [...arr];
+	for (let i = 1; i <= arr.length; i++) {
+		newArr.push(i);
+	}
+	return newArr;
+}
+
+console.log(duplicate([1, 2, 3, 4, 5]));
