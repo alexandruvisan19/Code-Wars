@@ -1,2 +1,1 @@
-
-}
+	// return Array.from(s).filter((s) => "aeiou".includes(s));
