@@ -1,1 +1,1 @@
-	// return res.join("\n");
+console.log("Cm".match(/[.]+/));

@@ -1,17 +1,28 @@
-class Espresso {
-	constructor(test1, test2, test3, test4) {
-		this.test1 = test1;
-		this.test2 = test2;
-		this.test3 = test3;
-		this.test4 = test4;
-	}
-	test5() {
-		console.log("make coffe");
-	}
-	test6() {
-		console.log("add milk");
+// You will be given a string (x) featuring a cat 'C' and a mouse 'm'. The rest of the string will be made up of '.'.
+
+// You need to find out if the cat can catch the mouse from it's current position. The cat can jump over three characters. So:
+
+// C.....m returns 'Escaped!' <-- more than three characters between
+
+// C...m returns 'Caught!' <-- as there are three characters between the two, the cat can jump.
+
+function catMouse(x) {
+	if (x.match(/[.]+/) == null) {
+		return "Caught!";
+	} else if (x.match(/[.]+/)[0].length > 3) {
+		return "Escaped!";
+	} else {
+		return "Caught!";
 	}
 }
 
-let machinecoffe = new Espresso("alex", "ioana", "da", "nu");
-console.log(machinecoffe.test2);
+console.log("C.....m".length);
+console.log(catMouse("C.....m"));
+
+// describe("Cat and Mouse - Easy Version", () => {
+// 	it("Testing for fixed tests", () => {
+// 	  assert.strictEqual(catMouse('C....m'), "Escaped!");
+// 	  assert.strictEqual(catMouse('C..m'), "Caught!");
+// 	  assert.strictEqual(catMouse('C.....m'), "Escaped!");
+// 	})
+//   });

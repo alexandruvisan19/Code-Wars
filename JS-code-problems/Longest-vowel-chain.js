@@ -25,8 +25,8 @@ function solve(s) {
 	}
 	return max;
 }
-
-console.log(solve("ultrarevolutionariees"));
-
+// console.log(solve("ultrarevolutionariees"));
+console.log("ultrarevolutionariees".split(/[^aeiou]/).map((x) => x.length));
+console.log(..."ultrarevolutionariees".match(/[aeiou]+/g));
 // let regex = /([!-\~]*[aeiou][!-\~]*)/gi;
 // let test = "Th quick brown fox jumps over the lazy dog. It barked.";
