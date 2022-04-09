@@ -1,1 +1,1 @@
-			// str = str.replace(str[i], i + 1);
+	// return string.split(" ").forEach((v) => dict[v]);

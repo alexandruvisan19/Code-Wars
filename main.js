@@ -1,5 +1,5 @@
-function solve(a, b) {
-	for (let i = 0; i < a.length; i++) {}
+function dbSort(a) {
+	// Code here
 }
 
-console.log("xyab".localeCompare("xzca"));
+console.log(dbSort(["Banana", "Orange", "Apple", "Mango", 0, 2, 2]))
