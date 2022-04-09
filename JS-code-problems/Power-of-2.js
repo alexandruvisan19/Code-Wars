@@ -13,4 +13,4 @@ function powersOfTwo(n) {
 	return powerArr;
 }
 
-console.log(powersOfTwo(5));
+console.log(powersOfTwo(6));

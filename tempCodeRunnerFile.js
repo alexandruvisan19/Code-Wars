@@ -1,1 +1,1 @@
-console.log("Cm".match(/[.]+/));
+			// str = str.replace(str[i], i + 1);
