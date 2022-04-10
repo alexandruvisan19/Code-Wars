@@ -1,5 +1,9 @@
-function dbSort(a) {
-	// Code here
-}
+// function tripleX(str) {
+// 	let id = str.indexOf("x");
+// 	return str[id + 1];
+// }
 
-console.log(dbSort(["Banana", "Orange", "Apple", "Mango", 0, 2, 2]))
+// console.log(tripleX("xoxotrololololololoxxx"));
+
+console.log("xoxotrolsolololololoxxx".indexOf("s"));
+console.log("xxxoxxx".substring("xxsoxxx".indexOf("x") + 1, 2));

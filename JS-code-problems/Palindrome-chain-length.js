@@ -8,7 +8,6 @@
 
 // Example
 // For example, start with 87:
-
 //   87 +   78 =  165     - step 1, not a palindrome
 //  165 +  561 =  726     - step 2, not a palindrome
 //  726 +  627 = 1353     - step 3, not a palindrome
