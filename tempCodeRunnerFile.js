@@ -1,6 +1,1 @@
-function tripleX(str) {
-// 	let id = str.indexOf("x");
-// 	return str[id + 1];
-// }
-
-// console.log(tripleX("xoxotrololololololoxxx"));
+console.log("The sunset sets at twelve o' clock.".split("").join(" "));

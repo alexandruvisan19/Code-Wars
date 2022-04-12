@@ -1,9 +1,9 @@
-// function tripleX(str) {
-// 	let id = str.indexOf("x");
-// 	return str[id + 1];
-// }
+function addColor(event) {
+	if (event.target.style.backgroundColor === "") {
+		event.target.style.backgroundColor = event.target.outerText.toLowerCase();
+	} else {
+		event.target.style.backgroundColor = "";
+	}
+}
 
-// console.log(tripleX("xoxotrololololololoxxx"));
-
-console.log("xoxotrolsolololololoxxx".indexOf("s"));
-console.log("xxxoxxx".substring("xxsoxxx".indexOf("x") + 1, 2));
+document.querySelector("ul").addEventListener("click", addColor);
