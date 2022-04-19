@@ -1,12 +1,9 @@
-function multiply(num1, num2) {
-	if (num2 !== undefined) {
-		return num1 + num2;
+function scrollingText(text) {
+	let newArr = [];
+	for (let i = 0; i < text.length; i++) {
+		newArr.push((text.slice(i, text.length) + text.slice(0, i)).toUpperCase());
 	}
-	return function executeMultiply(num2) {
-		return num1 * num2;
-	};
+	return newArr;
 }
 
-console.log(multiply(4, 5));
-const double = multiply(2);
-console.log(double(2));
+console.log(scrollingText("codewars")); // ["ABC","BCA","CAB"]

@@ -1,2 +1,3 @@
-
-// scheduleMeeting("7:30", 30); // true
+	for (let i = 1; i <= nFloors; N += 2) {
+		tower.push(i);
+	}

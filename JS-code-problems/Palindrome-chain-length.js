@@ -5,7 +5,6 @@
 // If the input number is already a palindrome, the number of steps is 0.
 
 // All inputs are guaranteed to have a final palindrome which does not overflow MAX_SAFE_INTEGER.
-
 // Example
 // For example, start with 87:
 //   87 +   78 =  165     - step 1, not a palindrome
