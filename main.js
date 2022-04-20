@@ -1,9 +1,13 @@
-function scrollingText(text) {
-	let newArr = [];
-	for (let i = 0; i < text.length; i++) {
-		newArr.push((text.slice(i, text.length) + text.slice(0, i)).toUpperCase());
+class Chameleon {
+	static colorChange(newColor) {
+		this.newColor = newColor;
+		return this.newColor;
 	}
-	return newArr;
+
+	constructor({ newColor = "green" } = {}) {
+		this.newColor = newColor;
+	}
 }
 
-console.log(scrollingText("codewars")); // ["ABC","BCA","CAB"]
+const freddie = new Chameleon({ newColor: "purple" });
+console.log(freddie.colorChange("orange"));
