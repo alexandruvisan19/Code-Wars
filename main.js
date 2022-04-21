@@ -1,13 +1,9 @@
-class Chameleon {
-	static colorChange(newColor) {
-		this.newColor = newColor;
-		return this.newColor;
-	}
-
-	constructor({ newColor = "green" } = {}) {
-		this.newColor = newColor;
-	}
+function calculate(n1) {
+	return function calculate2(n2) {
+		return function calculate3(n3) {
+			return n1 + n2 + n3;
+		};
+	};
 }
 
-const freddie = new Chameleon({ newColor: "purple" });
-console.log(freddie.colorChange("orange"));
+console.log(calculate(1)(2)(3));
