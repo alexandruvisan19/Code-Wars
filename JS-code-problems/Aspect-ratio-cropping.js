@@ -6,7 +6,6 @@
 // assert.deepEqual(aspectRatio(960, 720), [1280,720], "x = 960, y = 720");
 // assert.deepEqual(aspectRatio(1440, 1080), [1920,1080], "x = 1440, y = 1080");
 // assert.deepEqual(aspectRatio(1920, 1440), [2560,1440], "x = 1920, y = 1440");
-
 // console.log(Math.ceil(1.77777 * 480));
 
 function aspectRatio(y) {

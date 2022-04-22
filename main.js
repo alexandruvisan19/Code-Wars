@@ -1,9 +1,5 @@
-function calculate(n1) {
-	return function calculate2(n2) {
-		return function calculate3(n3) {
-			return n1 + n2 + n3;
-		};
-	};
+function dative(word) {
+	return /[aáoóuú]/.test(word) ? word + "nak" : word + "nek";
 }
 
-console.log(calculate(1)(2)(3));
+console.log(dative("tükör"));
