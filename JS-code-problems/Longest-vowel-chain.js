@@ -9,7 +9,6 @@
 //     Test.assertEquals(solve("chrononhotonthuooaos"),5);
 //     Test.assertEquals(solve("iiihoovaeaaaoougjyaw"),8);
 //     });
-
 function solve(s) {
 	let cur = 0;
 	let max = 0;
