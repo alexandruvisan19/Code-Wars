@@ -10,5 +10,3 @@ function powersOfTwo(n) {
 	}
 	return powerArr;
 }
-
-console.log(powersOfTwo(6));
