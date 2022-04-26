@@ -24,4 +24,4 @@ function palindromeChainLength(n) {
 	return steps;
 }
 
-console.log(palindromeChainLength(87));
+console.log(palindromeChainLength(88));
