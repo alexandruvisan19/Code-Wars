@@ -1,18 +1,11 @@
-function count(string) {
-	return string.split("").reduce((obj, elem) => {
-		if (elem in obj) {
-			obj[elem]++;
-		} else {
-			obj[elem] = 1;
-		}
-		return obj;
-	}, {});
+function loadScript(src, callback) {
+	let script = document.createElement("script");
+	script.src = src;
+	script.onload = () => callback(script);
+	document.head.append(script);
 }
 
-console.log(count("aba"));
-
-// let obj = {};
-
-// obj["a"] = obj["a"] || 1;
-
-// console.log(obj);
+loadScript("https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.2.0/lodash.js", (script) => {
+	alert(`Cool, the script ${script.src} is loaded`);
+	alert(_); // function declared in the loaded script
+});
