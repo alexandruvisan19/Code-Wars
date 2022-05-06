@@ -1,7 +1,7 @@
-function dirReduc(arr) {
-	for (let i = 0; i < arr.length; i++) {
-		ret
-	}
+function findNb(m) {
+	return 1;
 }
 
-console.log(dirReduc(["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"]));
+// console.log(findEvenIndex([20, 10, -80, 10, 10, 15, 35]));
+// console.log(findNb(1071225)); // 45
+console.log(Math.cbrt(1071225));
