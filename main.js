@@ -1,7 +1,23 @@
-function findNb(m) {
-	return 1;
+function validBraces(braces) {
+	let regex = /\(\)|\[\]|\{\}/g;
+	while (regex.test(braces)) {
+		braces = braces.replace(regex, "");
+	}
+	return braces;
 }
-
-// console.log(findEvenIndex([20, 10, -80, 10, 10, 15, 35]));
-// console.log(findNb(1071225)); // 45
-console.log(Math.cbrt(1071225));
+// console.log(validBraces("()))"), false);
+// console.log(validBraces("()"), true);
+// console.log(validBraces("[]"), true);
+// console.log(validBraces("{}"), true);
+// console.log(validBraces("(){}[]"), true);
+// console.log(validBraces("([{}])"), true);
+console.log(validBraces("(}"), false);
+// console.log(validBraces("[(])"), false);
+// console.log(validBraces("({})[({})]"), true);
+// console.log(validBraces("(})"), false);
+// console.log(validBraces("(({{[[]]}}))"), true);
+// console.log(validBraces("{}({})[]"), true);
+// console.log(validBraces(")(}{]["), false);
+// console.log(validBraces("())({}}{()][]["), false);
+// console.log(validBraces("(((({{"), false);
+// console.log(validBraces("}}]]))}])"), false);
