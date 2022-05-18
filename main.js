@@ -1,53 +1,16 @@
-class Character {
-	// If you need to initialize values when creating the
-	// object, you must include a constructor
-	constructor(initialHp = 100) {
-		this.hp = initialHp;
+function calculate(x) {
+	let obj = {};
+	let newStr = "";
+	for (let i = 0; i < x.length; i++) {
+		obj[x[i]] = obj[x[i]] + 1 || 1;
 	}
-
-	// If you will always initialize an instance with a hard-coded
-	// value, you can declare that without a constructor
-	alive = true;
-
-	// I can refer to the object calling this method as `this`
-	// and therefore can access and update the properties of
-	// this object with, e.g.: `this.hp = ...`
-	updateHp(amount) {
-		const calc = this.hp + amount;
-		if (calc <= 0) {
-			// Trying to avoid any character
-			// having a negative amount of HP
-			this.hp = 0;
-			this.alive = false;
-		} else {
-			this.hp = calc;
-		}
+	for (let key in obj) {
+		newStr += key + obj[key];
 	}
+	return newStr;
 }
 
-class Enemy extends Character {
-	constructor(hp, lootToDrop) {
-		super(hp);
-		this.lootToDrop = lootToDrop;
-	}
-}
-
-class Hero extends Character {
-	constructor(hp) {
-		super(hp);
-	}
-	inventory = [];
-
-	defeatEnemy(enemy) {
-		if (enemy.lootToDrop) {
-			this.inventory.push(enemy.lootToDrop);
-		}
-		enemy.updateHp(enemy.hp * -1);
-	}
-}
-
-const enemy = new Enemy(100, "Sword of a Thousand Truths");
-const me = new Hero(100);
-
-me.defeatEnemy(enemy);
-console.log(me.inventory);
+(function () {
+	let word = "calculator";
+	console.log(calculate(word));
+})();

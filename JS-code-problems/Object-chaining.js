@@ -9,5 +9,4 @@ let ladder = {
 		return this;
 	},
 };
-
 console.log(ladder.up().up().down().step);
