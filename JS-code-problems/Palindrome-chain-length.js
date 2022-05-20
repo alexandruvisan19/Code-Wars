@@ -12,7 +12,6 @@
 //  726 +  627 = 1353     - step 3, not a palindrome
 // 1353 + 3531 = 4884     - step 4, palindrome!
 // 4884 is a palindrome and we needed 4 steps to obtain it, so answer for 87 is 4.
-
 function palindromeChainLength(n) {
 	if (parseInt(String(n).split("").reverse().join("")) === n) return 0;
 	let total = n + parseInt(String(n).split("").reverse().join(""));
